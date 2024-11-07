@@ -1,1 +1,17 @@
-.
+
+#include <iostream>
+#include <string>
+
+int main() {
+    double finalAmount = 100.0; 
+    std::string couponCode;
+    std::cout << "Enter a coupon code (if any): ";
+    std::cin >> couponCode;
+    double couponDiscount = (couponCode == "SAVE10") ? 10.0 : 0.0;
+   
+    double totalAfterCoupon = finalAmount - couponDiscount;
+   
+    std::cout << "Total after applying coupon: $" << totalAfterCoupon << std::endl;
+    
+    return 0;
+}
